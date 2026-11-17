@@ -1,0 +1,15 @@
+# Data & reports
+data/
+reports/
+
+# Python
+.Venv/
+__pycache__
+*.pyc
+.env
+
+# Node
+node_modules/
+frontend/dist/
+rag_index/
+*.duckdb

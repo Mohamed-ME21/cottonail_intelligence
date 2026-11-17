@@ -1,0 +1,557 @@
+﻿{
+    "tables":  [
+                   {
+                       "source":  "branches.csv",
+                       "table":  "branches",
+                       "rows":  80,
+                       "columns":  [
+                                       "branch_id",
+                                       "branch_name_ar",
+                                       "governorate_ar",
+                                       "city_ar",
+                                       "address_ar",
+                                       "retail_location_type",
+                                       "opening_date"
+                                   ]
+                   },
+                   {
+                       "source":  "customers.csv",
+                       "table":  "customers",
+                       "rows":  85000,
+                       "columns":  [
+                                       "customer_id",
+                                       "customer_segment",
+                                       "customer_name_ar",
+                                       "governorate_ar",
+                                       "joined_date",
+                                       "age_band"
+                                   ]
+                   },
+                   {
+                       "source":  "data_dictionary.csv",
+                       "table":  "data_dictionary",
+                       "rows":  169,
+                       "columns":  [
+                                       "table_name",
+                                       "field_name",
+                                       "description"
+                                   ]
+                   },
+                   {
+                       "source":  "delivery_shipments.csv",
+                       "table":  "delivery_shipments",
+                       "rows":  97660,
+                       "columns":  [
+                                       "shipment_id",
+                                       "sales_order_id",
+                                       "ship_date",
+                                       "delivery_date",
+                                       "ship_to_governorate",
+                                       "carrier",
+                                       "shipping_fee_EGP",
+                                       "fulfillment_status"
+                                   ]
+                   },
+                   {
+                       "source":  "employees.csv",
+                       "table":  "employees",
+                       "rows":  640,
+                       "columns":  [
+                                       "employee_id",
+                                       "employee_name_ar",
+                                       "branch_id",
+                                       "position_en",
+                                       "hire_date",
+                                       "salary_base_EGP_2026"
+                                   ]
+                   },
+                   {
+                       "source":  "factories.csv",
+                       "table":  "factories",
+                       "rows":  6,
+                       "columns":  [
+                                       "factory_id",
+                                       "factory_name_ar",
+                                       "governorate_ar",
+                                       "production_focus"
+                                   ]
+                   },
+                   {
+                       "source":  "import_partners.csv",
+                       "table":  "import_partners",
+                       "rows":  16,
+                       "columns":  [
+                                       "import_partner_id",
+                                       "partner_name",
+                                       "country",
+                                       "goods_category",
+                                       "shipping_terms"
+                                   ]
+                   },
+                   {
+                       "source":  "import_shipments.csv",
+                       "table":  "import_shipments",
+                       "rows":  4200,
+                       "columns":  [
+                                       "import_shipment_id",
+                                       "import_partner_id",
+                                       "shipment_date",
+                                       "port_name",
+                                       "container_type",
+                                       "commodity_class",
+                                       "customs_value_USD",
+                                       "freight_USD",
+                                       "duty_and_tax_USD",
+                                       "destination_warehouse_id"
+                                   ]
+                   },
+                   {
+                       "source":  "inventory_transfer_items.csv",
+                       "table":  "inventory_transfer_items",
+                       "rows":  109614,
+                       "columns":  [
+                                       "transfer_line_id",
+                                       "transfer_id",
+                                       "sku_id",
+                                       "quantity_units"
+                                   ]
+                   },
+                   {
+                       "source":  "inventory_transfers.csv",
+                       "table":  "inventory_transfers",
+                       "rows":  36500,
+                       "columns":  [
+                                       "transfer_id",
+                                       "transfer_date",
+                                       "source_warehouse_id",
+                                       "destination_branch_id",
+                                       "transfer_status",
+                                       "transport_cost_EGP"
+                                   ]
+                   },
+                   {
+                       "source":  "marketing_campaigns.csv",
+                       "table":  "marketing_campaigns",
+                       "rows":  2200,
+                       "columns":  [
+                                       "campaign_id",
+                                       "start_date",
+                                       "end_date",
+                                       "channel",
+                                       "target_audience",
+                                       "governorate_ar",
+                                       "budget_EGP",
+                                       "spend_EGP",
+                                       "impressions",
+                                       "clicks",
+                                       "orders_attributed"
+                                   ]
+                   },
+                   {
+                       "source":  "monthly_stock.csv",
+                       "table":  "monthly_stock",
+                       "rows":  142784,
+                       "columns":  [
+                                       "year_month",
+                                       "stock_location_id",
+                                       "stock_location_type",
+                                       "product_category",
+                                       "closing_units",
+                                       "closing_stock_value_EGP",
+                                       "stockout_risk_score"
+                                   ]
+                   },
+                   {
+                       "source":  "operating_expenses.csv",
+                       "table":  "operating_expenses",
+                       "rows":  47000,
+                       "columns":  [
+                                       "expense_id",
+                                       "expense_date",
+                                       "branch_or_department_id",
+                                       "expense_category",
+                                       "amount_EGP",
+                                       "payment_method",
+                                       "vendor_name"
+                                   ]
+                   },
+                   {
+                       "source":  "payroll.csv",
+                       "table":  "payroll",
+                       "rows":  13210,
+                       "columns":  [
+                                       "payroll_id",
+                                       "employee_id",
+                                       "pay_month",
+                                       "base_salary_EGP",
+                                       "overtime_EGP",
+                                       "bonus_EGP",
+                                       "deductions_EGP",
+                                       "net_paid_EGP"
+                                   ]
+                   },
+                   {
+                       "source":  "processed/dim_product.csv",
+                       "table":  "processed__dim_product",
+                       "rows":  238,
+                       "columns":  [
+                                       "product_id",
+                                       "internal_product_name_ar",
+                                       "category_en",
+                                       "audience",
+                                       "internal_listed_price_EGP",
+                                       "source_url",
+                                       "public_product_name_ar",
+                                       "category_public",
+                                       "public_listed_price_EGP",
+                                       "match_status",
+                                       "is_internal_product",
+                                       "is_public_reference_product",
+                                       "name_match",
+                                       "price_match"
+                                   ]
+                   },
+                   {
+                       "source":  "processed/fact_returns.csv",
+                       "table":  "processed__fact_returns",
+                       "rows":  28500,
+                       "columns":  [
+                                       "return_id",
+                                       "sales_order_id",
+                                       "sales_line_id",
+                                       "return_date",
+                                       "original_order_date",
+                                       "branch_id",
+                                       "customer_id",
+                                       "sales_channel",
+                                       "payment_method",
+                                       "status",
+                                       "sku_id",
+                                       "product_id",
+                                       "product_name_ar",
+                                       "category_en",
+                                       "audience",
+                                       "return_quantity",
+                                       "refund_amount_EGP",
+                                       "reason",
+                                       "refund_method",
+                                       "sold_quantity",
+                                       "unit_price_EGP",
+                                       "gross_line_EGP",
+                                       "discount_line_EGP",
+                                       "net_line_EGP",
+                                       "unit_cost_EGP",
+                                       "line_cost_EGP",
+                                       "margin_EGP",
+                                       "days_to_return",
+                                       "return_year",
+                                       "return_month",
+                                       "return_year_month"
+                                   ]
+                   },
+                   {
+                       "source":  "processed/fact_sales.csv",
+                       "table":  "processed__fact_sales",
+                       "rows":  1138536,
+                       "columns":  [
+                                       "sales_line_id",
+                                       "sales_order_id",
+                                       "order_date",
+                                       "branch_id",
+                                       "customer_id",
+                                       "sales_channel",
+                                       "payment_method",
+                                       "status",
+                                       "sku_id",
+                                       "product_id",
+                                       "product_name_ar",
+                                       "category_en",
+                                       "category_public",
+                                       "audience",
+                                       "quantity",
+                                       "unit_price_EGP",
+                                       "gross_line_EGP",
+                                       "discount_line_EGP",
+                                       "net_line_EGP",
+                                       "unit_cost_EGP",
+                                       "line_cost_EGP",
+                                       "margin_EGP",
+                                       "order_year",
+                                       "order_month",
+                                       "year_month"
+                                   ]
+                   },
+                   {
+                       "source":  "processed/returns_by_return_month.csv",
+                       "table":  "processed__returns_by_return_month",
+                       "rows":  97,
+                       "columns":  [
+                                       "return_year_month",
+                                       "return_records",
+                                       "returned_quantity",
+                                       "refunds_EGP",
+                                       "distinct_orders",
+                                       "distinct_sales_lines"
+                                   ]
+                   },
+                   {
+                       "source":  "processed/sales_returns_analysis.csv",
+                       "table":  "processed__sales_returns_analysis",
+                       "rows":  1138536,
+                       "columns":  [
+                                       "sales_line_id",
+                                       "sales_order_id",
+                                       "order_date",
+                                       "branch_id",
+                                       "customer_id",
+                                       "sales_channel",
+                                       "payment_method",
+                                       "status",
+                                       "sku_id",
+                                       "product_id",
+                                       "product_name_ar",
+                                       "category_en",
+                                       "category_public",
+                                       "audience",
+                                       "quantity",
+                                       "unit_price_EGP",
+                                       "gross_line_EGP",
+                                       "discount_line_EGP",
+                                       "net_line_EGP",
+                                       "unit_cost_EGP",
+                                       "line_cost_EGP",
+                                       "margin_EGP",
+                                       "order_year",
+                                       "order_month",
+                                       "year_month",
+                                       "return_records",
+                                       "returned_quantity",
+                                       "refund_amount_EGP",
+                                       "first_return_date",
+                                       "last_return_date",
+                                       "has_return",
+                                       "return_quantity_exceeds_sold",
+                                       "remaining_quantity",
+                                       "net_after_refund_proxy_EGP",
+                                       "return_quantity_rate",
+                                       "refund_to_net_sales_rate",
+                                       "order_year_month"
+                                   ]
+                   },
+                   {
+                       "source":  "processed/sales_returns_by_branch.csv",
+                       "table":  "processed__sales_returns_by_branch",
+                       "rows":  80,
+                       "columns":  [
+                                       "branch_id",
+                                       "sales_lines",
+                                       "sold_quantity",
+                                       "returned_quantity",
+                                       "net_sales_before_tax_EGP",
+                                       "refunds_EGP",
+                                       "lines_with_returns",
+                                       "return_quantity_rate",
+                                       "refund_to_net_sales_rate",
+                                       "net_after_refund_proxy_EGP"
+                                   ]
+                   },
+                   {
+                       "source":  "processed/sales_returns_by_product.csv",
+                       "table":  "processed__sales_returns_by_product",
+                       "rows":  139,
+                       "columns":  [
+                                       "product_id",
+                                       "product_name_ar",
+                                       "category_en",
+                                       "audience",
+                                       "sales_lines",
+                                       "sold_quantity",
+                                       "returned_quantity",
+                                       "gross_sales_EGP",
+                                       "discounts_EGP",
+                                       "net_sales_before_tax_EGP",
+                                       "refunds_EGP",
+                                       "sales_margin_EGP",
+                                       "lines_with_returns",
+                                       "return_quantity_rate",
+                                       "refund_to_net_sales_rate",
+                                       "net_after_refund_proxy_EGP"
+                                   ]
+                   },
+                   {
+                       "source":  "processed/sales_returns_by_sales_month.csv",
+                       "table":  "processed__sales_returns_by_sales_month",
+                       "rows":  97,
+                       "columns":  [
+                                       "order_year_month",
+                                       "sales_lines",
+                                       "sold_quantity",
+                                       "returned_quantity",
+                                       "net_sales_before_tax_EGP",
+                                       "refunds_EGP",
+                                       "return_quantity_rate",
+                                       "refund_to_net_sales_rate",
+                                       "net_after_refund_proxy_EGP"
+                                   ]
+                   },
+                   {
+                       "source":  "PRODUCT_CATALOG_PUBLIC_REFERENCE.csv",
+                       "table":  "product_catalog_public_reference",
+                       "rows":  238,
+                       "columns":  [
+                                       "product_id",
+                                       "product_name_ar",
+                                       "category",
+                                       "listed_price_EGP"
+                                   ]
+                   },
+                   {
+                       "source":  "products_catalog.csv",
+                       "table":  "products_catalog",
+                       "rows":  139,
+                       "columns":  [
+                                       "product_id",
+                                       "product_name_ar",
+                                       "category_en",
+                                       "audience",
+                                       "listed_price_EGP",
+                                       "source_url"
+                                   ]
+                   },
+                   {
+                       "source":  "purchase_order_items.csv",
+                       "table":  "purchase_order_items",
+                       "rows":  103334,
+                       "columns":  [
+                                       "po_line_id",
+                                       "po_id",
+                                       "sku_id",
+                                       "quantity",
+                                       "unit_cost_EGP",
+                                       "line_cost_EGP",
+                                       "delivery_date"
+                                   ]
+                   },
+                   {
+                       "source":  "purchase_orders.csv",
+                       "table":  "purchase_orders",
+                       "rows":  41500,
+                       "columns":  [
+                                       "po_id",
+                                       "po_date",
+                                       "supplier_id",
+                                       "receiving_warehouse_id",
+                                       "po_status",
+                                       "currency",
+                                       "po_subtotal_EGP",
+                                       "payment_terms_days",
+                                       "po_purpose"
+                                   ]
+                   },
+                   {
+                       "source":  "sales_order_items.csv",
+                       "table":  "sales_order_items",
+                       "rows":  1138536,
+                       "columns":  [
+                                       "sales_line_id",
+                                       "sales_order_id",
+                                       "order_date",
+                                       "branch_id",
+                                       "sku_id",
+                                       "product_id",
+                                       "quantity",
+                                       "unit_price_EGP",
+                                       "gross_line_EGP",
+                                       "discount_line_EGP",
+                                       "net_line_EGP",
+                                       "unit_cost_EGP",
+                                       "margin_EGP"
+                                   ]
+                   },
+                   {
+                       "source":  "sales_orders.csv",
+                       "table":  "sales_orders",
+                       "rows":  540000,
+                       "columns":  [
+                                       "sales_order_id",
+                                       "order_date",
+                                       "branch_id",
+                                       "customer_id",
+                                       "sales_channel",
+                                       "payment_method",
+                                       "items_count",
+                                       "gross_EGP",
+                                       "discount_EGP",
+                                       "net_before_tax_EGP",
+                                       "tax_EGP",
+                                       "paid_total_EGP",
+                                       "status"
+                                   ]
+                   },
+                   {
+                       "source":  "sales_payments.csv",
+                       "table":  "sales_payments",
+                       "rows":  540000,
+                       "columns":  [
+                                       "payment_id",
+                                       "sales_order_id",
+                                       "payment_date",
+                                       "payment_method",
+                                       "amount_EGP",
+                                       "status"
+                                   ]
+                   },
+                   {
+                       "source":  "sales_returns.csv",
+                       "table":  "sales_returns",
+                       "rows":  28500,
+                       "columns":  [
+                                       "return_id",
+                                       "sales_order_id",
+                                       "sales_line_id",
+                                       "return_date",
+                                       "sku_id",
+                                       "return_quantity",
+                                       "refund_amount_EGP",
+                                       "reason",
+                                       "refund_method"
+                                   ]
+                   },
+                   {
+                       "source":  "sku_variants.csv",
+                       "table":  "sku_variants",
+                       "rows":  695,
+                       "columns":  [
+                                       "sku_id",
+                                       "product_id",
+                                       "size",
+                                       "color_ar",
+                                       "price_multiplier"
+                                   ]
+                   },
+                   {
+                       "source":  "suppliers.csv",
+                       "table":  "suppliers",
+                       "rows":  48,
+                       "columns":  [
+                                       "supplier_id",
+                                       "supplier_name_ar",
+                                       "material_type",
+                                       "city_country",
+                                       "payment_terms_days"
+                                   ]
+                   },
+                   {
+                       "source":  "warehouses.csv",
+                       "table":  "warehouses",
+                       "rows":  12,
+                       "columns":  [
+                                       "warehouse_id",
+                                       "warehouse_label",
+                                       "governorate_ar",
+                                       "warehouse_kind",
+                                       "capacity_units"
+                                   ]
+                   }
+               ]
+}
